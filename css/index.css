@@ -2342,6 +2342,10 @@ img.footer_mini_logo:hover {
     transition: all 0.3s, color 0s, opacity 0.3s;
   }
 }
+#nav #site-name span {
+  font-size: 18px;
+  line-height: 32px;
+}
 @media screen and (max-width: 768px) {
   #nav #site-name span {
     padding-left: 8px;
