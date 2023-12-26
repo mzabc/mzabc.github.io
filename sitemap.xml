@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <!-- Created By http://www.zhetao.com/sitemapcreator,  URLs: 12 Generated at: 2023-12-22 16:15:35 -->
+
+  <url>
+    <loc>https://blog.cvoai.com/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://blog.cvoai.com/tags/git/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://blog.cvoai.com/tags/git%E4%BB%93%E5%BA%93/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://blog.cvoai.com/archives/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://blog.cvoai.com/categories/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://blog.cvoai.com/tags/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://blog.cvoai.com/equipment/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://blog.cvoai.com/tlink/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://blog.cvoai.com/about/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://blog.cvoai.com/2023/12/14/git%E4%BB%93%E5%BA%93%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://blog.cvoai.com/2023/12/07/hello-world/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://blog.cvoai.com/about</loc>
+    <priority>1.00</priority>
+  </url>
+
+</urlset>
