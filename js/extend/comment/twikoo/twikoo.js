@@ -1,17 +1,16 @@
 const changeContent = (content) => {
-    if (content === '') return content
+    if (content === '') return content;
 
-    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>|<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>|<pre><code>.*?<\/pre>|<[^>]+>/g, (match, img, link, code) => {
-        if (img) return '[图片]';
-        if (link) return '[链接]';
-        if (code) return '[代码]';
-        return '';
-    })
+    const replacements = [
+        { regex: /<img.*?src="(.*?)"?[^\>]+>/ig, replacement: '[图片]' },
+        { regex: /<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, replacement: '[链接]' },
+        { regex: /<pre><code>.*?<\/pre>/gi, replacement: '[代码]' },
+        { regex: /<[^>]+>/g, replacement: "" }
+    ];
 
-    if (content.length > 150) {
-        content = content.substring(0, 150) + '...'
-    }
-    return content
+    content = replacements.reduce((str, { regex, replacement }) => str.replace(regex, replacement), content);
+
+    return content.length > 150 ? content.substring(0, 150) + '...' : content;
 }
 
 const getComment = () => {
@@ -31,35 +30,6 @@ const getComment = () => {
                 'url': `${e.url}#${e.id}`,
                 'date': new Date(e.created).toISOString()
             }))
-
-            if (window.location.pathname === "/links/" || window.location.pathname === "/links") {
-                let submit = document.getElementsByClassName('tk-submit ')
-                let text = document.getElementsByClassName("el-textarea__inner");
-                text[0].value += `昵称（请勿包含博客等字样）：
-网站地址（要求博客地址，请勿提交个人主页）：
-头像图片url（请提供尽可能清晰的图片，我会上传到我的图床）：
-描述：`;
-                text[0].style.height = "142px"
-                submit.item(0).style.display = "none";
-
-                window.checkForm = function () {
-                    const checkboxes = document.querySelectorAll('input[onclick="checkForm()"]');
-                    let allChecked = true;
-
-                    checkboxes.forEach(checkbox => {
-                        if (!checkbox.checked) {
-                            allChecked = false;
-                        }
-                    });
-
-                    if (allChecked) {
-                        submit.item(0).style.display = "block";
-                    } else {
-                        submit.item(0).style.display = "none";
-                    }
-                }
-            }
-
             generateHtml(twikooArray)
         }).catch(function (err) {
             $dom.innerHTML = "无法获取评论，请确认相关配置是否正确"
@@ -93,3 +63,5 @@ const newestCommentInit = () => {
         getComment()
     }
 }
+
+newestCommentInit()
