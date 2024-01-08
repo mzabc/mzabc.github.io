@@ -117,7 +117,7 @@ console.log(
         }
     },
     covercolor: {
-        enable: false
+        enable: true
     },
     comment: {
         enable: true,
@@ -257,7 +257,7 @@ document.addEventListener('pjax:complete', () => {
     if (document.getElementById('waterfall')) {
         sco.reflashEssayWaterFall();
     }
-}), 500);</script><script id="config-diff">var PAGE_CONFIG = {
+}), 500);</script><script async src="https://cdn.bootcdn.net/ajax/libs/busuanzi/2.3.0/bsz.pure.mini.js"></script><script id="config-diff">var PAGE_CONFIG = {
     is_post: false,
     is_page: true,
     is_home: false,
@@ -266,7 +266,11 @@ document.addEventListener('pjax:complete', () => {
     comment: true,
 }
 </script></div><!-- post-ai)--><script src="https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script><script src="https://cdn.bootcdn.net/ajax/libs/meting/2.0.1/Meting.min.js"></script><script>const meting_api = 'https://api.injahow.cn/meting/?server=:server&type=:type&id=:id&auth=:auth&r=:r';
-</script><script src="/lib/txmap.min.js"></script><script src="/js/extend/comment/twikoo/twikoo.js"></script><script src="/js/extend/comment/twikoo/commentBarrage.js"></script><!-- pjax--><script>let pjaxSelectors = [
+</script><script>const coverColorConfig = {
+    mode: 'local',
+    api: 'https://img2color.meuicat.com/api?img=',
+    time: 43200000,
+}</script><script src="/lib/cover-color.min.js"></script><script src="/lib/txmap.min.js"></script><script src="/js/extend/comment/twikoo/twikoo.js"></script><script src="/js/extend/comment/twikoo/commentBarrage.js"></script><!-- pjax--><script>let pjaxSelectors = [
     'title',
     '#body-wrap',
     '#site-config',
